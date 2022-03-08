@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "423381336794",
+    "firebase_url": "https://emergency-system-eb0f8-default-rtdb.firebaseio.com",
+    "project_id": "emergency-system-eb0f8",
+    "storage_bucket": "emergency-system-eb0f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423381336794:android:8168b3e66cf8fd8eaf5be3",
+        "android_client_info": {
+          "package_name": "com.companyname.evbas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423381336794-0tesj2a2tt4sab1qo7oui1am2tun5kqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5L0VqhbBgscvLxl2DiLKAngON99HN_Qo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423381336794-0tesj2a2tt4sab1qo7oui1am2tun5kqs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "423381336794-ctjkac2v6cjdqpo9tb4k3afr8jq5u2df.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.companyname.EVBAS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

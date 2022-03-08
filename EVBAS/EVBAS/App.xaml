@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EVBAS.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Labelstyle" TargetType="Label"  >
+                <Setter  Property="FontAttributes" Value="Bold"></Setter>
+                <Setter  Property="FontSize" Value="Medium"></Setter>
+                <Setter  Property="TextColor" Value="SeaGreen"></Setter>
+                <Setter Property="FontFamily" Value="Tahoma "></Setter>
+            </Style>
+            <Style x:Key="Entrystyle" TargetType="Entry"  >
+
+                <Setter  Property="TextColor" Value="Red"></Setter>
+            </Style>
+            <Style x:Key="Buttonstyle" TargetType="Button"  >
+                <Setter  Property="CornerRadius" Value="60"></Setter>
+                <Setter  Property="BorderWidth" Value="1"></Setter>
+                <Setter  Property="TextColor" Value="Black"></Setter>
+                <Setter Property="BackgroundColor" Value="LightGray"></Setter>
+                <Setter Property= "BorderColor" Value="Black"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

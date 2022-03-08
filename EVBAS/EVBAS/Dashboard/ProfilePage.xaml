@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="EVBAS.Dashboard.ProfilePage">
+    <ScrollView>
+        <StackLayout>
+        <Label x:Name="Titlename" FontSize="Title"  TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold">
+        </Label>
+        <Grid  RowDefinitions="auto,auto,auto,auto">
+
+
+            <StackLayout BackgroundColor="AliceBlue" Orientation="Horizontal" Grid.Row="0">
+                <xct:AvatarView  Text="MC" Size="100"/>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="MechanicName"  FontSize="Title"  ></Label>
+                    <Label x:Name="MechanicContact"  ></Label>
+                </StackLayout>
+            </StackLayout>
+            <Frame BackgroundColor="GhostWhite" CornerRadius="10" Grid.Row="1">
+                <StackLayout Grid.Row="1">
+                    <Label Text="Mechanic Information" TextColor="Black" HorizontalOptions="Center" FontSize="Title"  FontAttributes="Bold" />
+
+                    <Label Text="Mechanic Type:"  HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium" FontAttributes="Bold"  ></Label>
+
+                    <Label x:Name="McType"  FontAttributes="Bold"  FontSize="Medium" Margin="0,0,0,0" ></Label>
+                    <Label Text="Description" FontSize="Title" TextColor="Black" FontAttributes="Bold" ></Label>
+                    <Label x:Name="Description" FontAttributes="Bold"  ></Label>
+
+                </StackLayout>
+            </Frame>
+            <Frame x:Name="chatframe" IsVisible="false"  CornerRadius="10" BackgroundColor="GhostWhite" Grid.Row="2"    >
+                <StackLayout>
+                    <Button x:Name="ChatButton" Text="ChatWithMechanic" Clicked="ChatButton_Clicked"></Button>
+                    <Button IsVisible="true" Text="Give Feedback" Clicked="Button_Clicked_1"></Button>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="3"   x:Name="Feedback" IsVisible="true" BackgroundColor="AliceBlue">
+               
+                    <StackLayout>
+                        <Label Text="Feedbacks" TextColor="Black" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center" ></Label>
+                <ListView   x:Name="FeedView" ItemsSource="{Binding .}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Label Text="{Binding Username}" FontSize="Medium" TextColor="Black"></Label>
+                                                <Label Text=":" TextColor="Black" FontSize="Medium"> </Label>
+                                                <Label Text="{Binding Userfeedback}" IsVisible="true" FontSize="Default" Margin="20,0,0,0" FontAttributes="Bold"></Label>
+
+                                    </StackLayout>
+                                   
+
+                                </StackLayout>
+                            </ViewCell>
+
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView></StackLayout>
+
+            </Frame>
+        </Grid>
+    </StackLayout></ScrollView>
+</ContentPage>

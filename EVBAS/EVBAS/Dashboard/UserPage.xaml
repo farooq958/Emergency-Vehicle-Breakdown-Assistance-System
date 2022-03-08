@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EVBAS.Dashboard.UserPage"
+             > 
+              
+    <ContentPage.Content>
+        
+            <StackLayout >
+            <Grid RowDefinitions="Auto,auto,Auto,auto,*" >
+                <Label Grid.Row="0" Text="Emergency System (EVBAS) " Margin="0,0,0,10" FontAttributes="Bold" HorizontalOptions="Start" FontSize="Title" TextColor="DarkCyan"></Label>
+                <Label Grid.Row="1" Text=" Welcome Farooq Khan" Margin="10,0,0,10" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Olive" TextDecorations="None" x:Name="Username" FontSize="Title"></Label>
+                <Label Text="Tap on Start Service Button to start the Service " TextColor="Black" Margin=" 0,0,0,20" Grid.Row="2"></Label>
+                <Button  Margin="10,0,10,10" Clicked="Button_Clicked" Grid.Row="3" Text=" Start Service" CornerRadius="10"></Button>
+                <IndicatorView x:Name="Serviceindicator" IsVisible="false" IsEnabled="False" />
+                <StackLayout Grid.Row="4">
+                    <Grid RowDefinitions="auto" ColumnDefinitions="*">
+                        <StackLayout Spacing="-20">
+                            <StackLayout Spacing="-60"  Orientation="Horizontal"><Label Text="Your Location" x:Name="urloc" IsVisible="false" TextColor="Black" FontSize="Medium" FontAttributes="Bold"></Label>
+                                <Line IsVisible="false" x:Name="linee" X1="90"
+      Y1="0"
+      X2="90"
+      Y2="90"
+      Stroke="Black" />
+                            </StackLayout>
+                            <Label x:Name="Result" Grid.Column="0"  TextColor="Black" ></Label> 
+                        </StackLayout>
+                       
+                        <StackLayout Grid.Column="1" Margin="0,0,0,0">
+                            <Label Text="Distance in KM " IsVisible="false" FontSize="Medium" FontAttributes="Bold" TextColor="Black" x:Name="Distanceinkm">
+                                
+                            </Label><Label x:Name="Distancecheck" Grid.Column="1" TextColor="Black" ></Label></StackLayout>
+                    
+                    </Grid>
+                    <StackLayout Grid.Row="4">
+
+                        <Frame CornerRadius="40" BackgroundColor="AliceBlue" IsVisible="false" x:Name="vmech">
+                            <Grid RowDefinitions="auto,*">
+                                <Label Text="Mechanics List " Grid.Row="0" TextColor="Olive" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="CenterAndExpand"></Label>
+                <ListView   x:Name="ResultMechanics"  Grid.Row="1"  ItemTapped = "ResultMechanics_ItemTapped" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                                    <ViewCell >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Grid BackgroundColor="Maroon" Padding="10">
+                                                <Label Text="{Binding Id}" TextColor="WhiteSmoke"/>
+                                            </Grid>
+                                            <StackLayout Orientation="Vertical" HeightRequest="100" Spacing="5 ">
+                                            <StackLayout Orientation="Horizontal" Spacing="10 ">
+                                                <Label Text="{Binding Name}" TextColor="Maroon"></Label>
+                                                 <Label Text="{Binding Details} "  TextColor="Purple"/>
+                                            </StackLayout>
+                                                
+                                               
+                                          <Label Text="{Binding Emaill} "  TextColor="Purple"/>
+                                                
+                                                
+
+                                       </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                  </Grid> </Frame> </StackLayout>
+</StackLayout>
+            </Grid>
+            
+            
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

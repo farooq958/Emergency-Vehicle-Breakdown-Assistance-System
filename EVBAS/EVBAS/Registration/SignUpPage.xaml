@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="EVBAS.Registration.SignUpPage">
+             
+    <ContentPage.Content>
+        <ScrollView>
+        <Frame BackgroundColor="#eeeeee" CornerRadius="60" >
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*" >
+               
+                        <Frame  BackgroundColor="Transparent" HeightRequest="70" >
+                            <Image Source="LoginImage.jpeg" Aspect="AspectFit" Grid.Row="0" Grid.Column="0" >
+
+                            </Image>
+                        </Frame>
+                        <Button Text="Signup" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black" HorizontalOptions="End" FontSize="Medium" Grid.Row="0" Grid.Column="1" ></Button>
+                        <Label Text="Create New Account " TextColor="Black" Margin="0,50,0,0 " Grid.Row="1" Grid.ColumnSpan="1" FontAttributes="Bold"></Label>
+
+                        <StackLayout Margin="0,30,0,0" Grid.Row="2" Grid.ColumnSpan="2">
+                            <Entry x:Name="Username" Placeholder="Name"></Entry>
+                            <Entry x:Name="SignupEmail" Placeholder="Email">
+                            <Entry.Behaviors>
+                                <xct:EmailValidationBehavior ></xct:EmailValidationBehavior>
+                            </Entry.Behaviors>
+                            </Entry>
+                            <Entry x:Name="Password" IsPassword="True"  Placeholder="Password"></Entry>
+                        <Entry x:Name="Details" Placeholder="Contact Number"></Entry>
+                        <Picker x:Name="UserPicker"
+                Title="Select One" SelectedIndexChanged="UserPicker_SelectedIndexChanged" >
+                            <Picker.ItemsSource   >
+                                <x:Array Type="{ x:Type x:String }">
+                                    <x:String >User</x:String>
+                                    <x:String >Mechanic</x:String>
+                                    
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Label x:Name="labelP" IsVisible="false" Text="Below details is Only For Mechanic" FontSize="Title"></Label>
+                        <Picker x:Name="MechanicType"
+                Title="Select One"   IsVisible="False"  >
+                            <Picker.ItemsSource   >
+                                <x:Array Type="{ x:Type x:String }">
+                                    <x:String >AutoMechanic</x:String>
+                                    <x:String >Motorcycle Mechanic</x:String>
+                                    <x:String >Small Engine Mechanic</x:String>
+                                    <x:String >Auto Body Mechanic</x:String>
+                                    <x:String >Tire Mechanic</x:String>
+                                    <x:String >Auto Glass Mechanic</x:String>
+                                    <x:String >Bicycle Mechanics</x:String>
+                                  
+
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Frame x:Name="Descriptionframe" IsVisible="false" BackgroundColor="GhostWhite" CornerRadius="10">
+
+                            <StackLayout>
+                                <Label x:Name="labelm"   Text="Brief Description Of the service you provide"></Label>
+                        <Entry x:Name="MDescription" > 
+                            
+                        </Entry></StackLayout>
+                            </Frame>
+                    </StackLayout>
+                        <Button x:Name="Signup" Text=" SignUp" Clicked="Signup_Clicked" TextColor="WhiteSmoke" BackgroundColor="#354874" Grid.Row="3" Grid.ColumnSpan ="2" Margin="0,40,0,0"></Button>
+                    
+      <!--      <StackLayout x:Name=" Verificationcode" IsVisible="true" Margin="0,10,0,0" Grid.Row="4"  Grid.ColumnSpan="2">
+                        <Label Text=" Enter The 4 digit Code sent to your Email" HorizontalOptions="StartAndExpand" ></Label>
+                        <StackLayout Orientation="Horizontal" Spacing="4" Margin="40,0,0,0">
+                        <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0" Padding="0">
+                            <Entry x:Name="v1" MaxLength="1" ></Entry>
+                        </Frame>
+                        <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0"  Padding="0">
+                                <Entry x:Name="v2" MaxLength="1"></Entry>
+                        </Frame>
+                        <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0" Padding="0">
+                                <Entry x:Name="v3" MaxLength="1"></Entry>
+                        </Frame>
+                        <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0" Padding="0">
+                                <Entry x:Name="v4" MaxLength="1"></Entry>
+                        </Frame></StackLayout>
+                          <Button x:Name="Register" HorizontalOptions="CenterAndExpand"   Text=" Register" Clicked="Register_Clicked" TextColor="WhiteSmoke" BackgroundColor="#354874"  Margin="30,10,0,0"></Button>   
+                    </StackLayout>
+           -->      
+            </Grid>
+        
+        </Frame></ScrollView>
+    </ContentPage.Content>
+</ContentPage>
